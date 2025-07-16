@@ -1,73 +1,126 @@
-# Welcome to your Lovable project
+# Scan-Attend-Track
 
-## Project info
+A modern, web-based QR code attendance and tracking system built with React, TypeScript, Vite, Tailwind CSS, and shadcn-ui. This project enables seamless attendance management for educational institutions or organizations by allowing users to scan QR codes for quick check-in/out, with dedicated modules for Admins, Teachers, and Students.
 
-**URL**: https://lovable.dev/projects/ff8cd20f-7afd-4482-a6a0-ac5d9f334148
+## Table of Contents
 
-## How can I edit this code?
+- [Features](#features)
+- [Demo](#demo)
+- [Project Structure](#project-structure)
+- [Technologies Used](#technologies-used)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Deployment](#deployment)
+- [Custom Domain](#custom-domain)
+- [Contributing](#contributing)
+- [License](#license)
 
-There are several ways of editing your application.
+## Features
 
-**Use Lovable**
+- **QR Code Attendance:** Students scan QR codes to mark attendance instantly.
+- **Role-based Modules:** Separate dashboards for Admin, Teacher, and Student.
+- **Real-time Updates:** Attendance data updates live in the UI.
+- **Secure Authentication:** Simple login system for different user roles.
+- **Responsive UI:** Works on desktop and mobile devices.
+- **Modern UI Components:** Built with shadcn-ui and Tailwind CSS.
+- **No Backend Required:** All logic runs in the browser (can be extended for backend integration).
+- **Easy Customization:** Modular codebase for rapid feature addition.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/ff8cd20f-7afd-4482-a6a0-ac5d9f334148) and start prompting.
+## Demo
 
-Changes made via Lovable will be committed automatically to this repo.
+[Live Demo](https://scan-attend-track.vercel.app/)
 
-**Use your preferred IDE**
+## Project Structure
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+```
+scan-attend-track/
+├── public/                # Static assets (favicon, robots.txt, etc.)
+├── src/
+│   ├── App.tsx            # Main application component
+│   ├── main.tsx           # Entry point
+│   ├── components/        # UI and feature components
+│   │   ├── AdminModule.tsx
+│   │   ├── TeacherModule.tsx
+│   │   ├── StudentModule.tsx
+│   │   ├── Header.tsx
+│   │   └── HomePage.tsx
+│   ├── hooks/             # Custom React hooks
+│   ├── lib/               # Utility functions
+│   ├── pages/             # Page-level components/routes
+│   └── ui/                # UI primitives (shadcn-ui)
+├── index.html             # HTML template
+├── package.json           # Project metadata and scripts
+├── tailwind.config.ts     # Tailwind CSS configuration
+├── tsconfig.json          # TypeScript configuration
+└── README.md              # Project documentation
+```
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Technologies Used
 
-Follow these steps:
+- [Vite](https://vitejs.dev/) – Fast build tool
+- [React](https://react.dev/) – UI library
+- [TypeScript](https://www.typescriptlang.org/) – Type safety
+- [Tailwind CSS](https://tailwindcss.com/) – Utility-first CSS
+- [shadcn-ui](https://ui.shadcn.com/) – Accessible UI components
+
+## Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (v16+ recommended)
+- [npm](https://www.npmjs.com/) or [bun](https://bun.sh/)
+
+### Installation
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
 git clone <YOUR_GIT_URL>
+cd scan-attend-track
+npm install
+```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### Running the Development Server
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```sh
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Usage
 
-**Use GitHub Codespaces**
+- **Admin:** Manage users, view attendance records, and generate reports.
+- **Teacher:** View and manage class attendance, generate QR codes for sessions.
+- **Student:** Scan QR codes to mark attendance, view attendance history.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+> **Note:** The current version is frontend-only. Backend/API integration can be added for persistent storage and authentication.
 
-## What technologies are used for this project?
+## Deployment
 
-This project is built with:
+You can deploy this project using [Lovable](https://lovable.dev/projects/ff8cd20f-7afd-4482-a6a0-ac5d9f334148) or any static hosting provider (Vercel, Netlify, GitHub Pages, etc.).
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### Deploy with Lovable
 
-## How can I deploy this project?
+1. Open the [Lovable Project](https://lovable.dev/projects/ff8cd20f-7afd-4482-a6a0-ac5d9f334148).
+2. Click on **Share → Publish**.
 
-Simply open [Lovable](https://lovable.dev/projects/ff8cd20f-7afd-4482-a6a0-ac5d9f334148) and click on Share -> Publish.
+### Manual Deployment
 
-## Can I connect a custom domain to my Lovable project?
+```sh
+npm run build
+# Deploy the contents of the 'dist' folder to your static host
+```
 
-Yes, you can!
+## Custom Domain
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+You can connect a custom domain via Lovable:
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+- Go to **Project > Settings > Domains** and click **Connect Domain**.
+- See [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide) for details.
+
+## Contributing
+
+Contributions are welcome! Please fork the repository and submit a pull request.
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE)
